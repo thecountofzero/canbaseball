@@ -1,5 +1,5 @@
 steal('can/control', 'can/view/ejs', 'canbaseball/models/player.js').
-	then(function($) {
+	then('canbaseball/plugins/jquery.corner.js', function($) {
 
 	can.Control("A", {}, {
 
