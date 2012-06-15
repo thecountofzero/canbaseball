@@ -1,24 +1,46 @@
 steal({src: 'canbaseball/fixtures/fixtures.js', ignore: true});
 
+steal('can/control', 'can/view/ejs', 'can/route', 'can/control/route').
+then('canbaseball/lib/utils',
+    'canbaseball/lib/ajaxsettings.js',
+    'canbaseball/widgets/status_panel',
+    'canbaseball/widgets/navigation',
+    'canbaseball/dashboard',
+    'canbaseball/resources/css', function($) {
 
-steal('can/control', 'can/view/ejs').
-	then('canbaseball/lib/utils').
-	then('./canbaseball.css').
-	then('canbaseball/widgets/a', 'canbaseball/widgets/b', 'canbaseball/widgets/c', function($) {
+    Router = can.Control({
 
-	canbaseball = can.Control({
-		init : function() {
-		}
-	});
+        init: function() {
+            this.currentApp = '';
+            this.mainContent = $('#mainContent');
+        },
 
-	// Initialize the app
-	//new CloudArray.StatusPanel('#statusPanel', {});
-	new A('#a', {});
-	new B('#b', {});
-	new C('#c', {});
+        "{can.route} app": function(data) {
+            var app = data.app;
 
-	console.log('is object: ' + MYAPP.utils.isObject(MYAPP.utils));
+            if(this.currentApp !== app) {
+                this.mainContent.empty();
 
-	//var a = can.getObject('MYAPP.local',[], true);
-	console.dir(MYAPP);
+                if(app === 'dashboard') {
+                    console.log('loading dashboard');
+                    new CanBaseball.Dashboard(this.mainContent);
+                }
+            }
+
+            this.currentApp = app;
+        }
+    });
+
+    can.route(':app');
+    can.route(':app/:appId');
+    can.route('', {app: 'dashboard'});
+
+    new Router(window);
+
+    $(document).ready(function() {
+        new CanBaseball.Navigation('nav', {});
+        new CanBaseball.StatusPanel('.topContent', {});
+        //new CanBaseball.Dashboard('#mainContent');
+    });
+    
 });

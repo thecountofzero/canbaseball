@@ -1,0 +1,92 @@
+.statusPanel {
+    text-align: center;
+    padding: 11px 0 5px 0;
+    font-family: 'Cuprum', sans-serif;
+    text-transform: capitalize;
+}
+.statusPanel ul li {
+    display: inline-block;
+    margin: 11px 5px 0 5px;
+    width: 125px;
+    text-align: center;
+}
+.statusPanel ul li a {
+    background: url(images/statusBg.png) repeat-x 0 0;
+    display: block;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #626262;
+    height: 55px;
+    width: 55px;
+    border-radius: 100%;
+    opacity: 0.6;
+    border: 2px solid #ababab;
+    margin: 0 auto 2px;
+}
+.statusPanel ul li:hover { background-position: 0 -79px }
+.statusPanel ul li:active { background-position: 0 -144px }
+.statusPanel ul li a span {
+    display: block;
+    margin-top: 5px;
+}
+.statusPanel ul li a.statusOk { background-position: 0 0 }
+.statusPanel ul li a.statusOk:hover {
+    background-position: 0 -101px;
+    border-color: #ffffff;
+}
+.statusPanel ul li a.statusErr { background-position: 0 -202px }
+.statusPanel ul li a.statusErr:hover {
+    background-position: 0 -303px;
+    border-color: #ffffff;
+}
+.statusPanel ul li a.statusWarn { background-position: 0 -404px }
+.statusPanel ul li a.statusWarn:hover {
+    background-position: 0 -505px;
+    border-color: #ffffff;
+}
+
+
+/* ========== Media queries ========== */
+
+/* ========== Devices and browsers with max of 799px ========== */
+
+@media only screen and (max-width: 799px) { 
+  .statusPanel ul li { width: 95px; }
+}
+
+/* ========== Devices and browsers with max of 767px and less than 799px ========== */
+
+@media only screen and (max-width: 767px) { 
+  .statusPanel {
+      float: none;
+      margin-right: 0;
+      display: block;
+      text-align: center;
+      margin-top: 2px;
+  }
+  .statusPanel ul li {
+      text-align: center;
+      display: inline-block;
+      float: none;
+      margin-left: 5%;
+      position: relative;
+      width: 100px;
+  }
+  .statusPanel ul li:first-child { margin-left: 0 }
+}
+
+/* ========== Mobile Portrait Size ========== */
+
+@media only screen and (min-width: 320px) and (max-width: 479px) { 
+  .statusPanel ul { text-align: center }
+  .statusPanel ul li {
+      text-align: center;
+      display: inline-block;
+      float: none;
+      margin: 0 2%;
+      position: relative;
+      width: 45%;
+      margin-bottom: 10px;
+  }
+  .statusPanel ul li:first-child { margin: 0 2% }
+}

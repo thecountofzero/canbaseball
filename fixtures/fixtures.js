@@ -3,6 +3,11 @@ steal({
 	ignore: true
 }).then(function() {
 
-	can.fixture('GET /players', '//canbaseball/fixtures/players.json');
-	can.fixture('GET /teams', '//canbaseball/fixtures/teams.json');
+	can.fixture('GET /statuses', '//canbaseball/fixtures/statuses.json');
+
+    can.fixture('GET /standingss/{id}', '//canbaseball/fixtures/standings.json');
+
+    can.fixture('GET /navitems', '//canbaseball/fixtures/nav_items.json');
+
+    can.fixture('GET /stats', '//canbaseball/fixtures/stats.json');
 });

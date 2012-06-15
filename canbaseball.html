@@ -1,22 +1,113 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<title>canbaseball - Dashboard</title>
-	<link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
-	<!--[if lt IE 9]>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+    <meta charset="utf-8">
+
+    <!-- Use the .htaccess and remove these lines to avoid edge case issues. More info: h5bp.com/i/378 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>CanBaseball</title>
+    <meta name="description" content="">
+
+    <!-- Mobile viewport optimized: h5bp.com/viewport -->
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+    <link href="http://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet" type="text/css" />
+
+    <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+    <!-- All JavaScript at the bottom, except this Modernizr build.
+    Modernizr enables HTML5 elements & feature detects for optimal performance.
+    Create your own custom Modernizr build: www.modernizr.com/download/ -->
+    <script src="/donejs/canbaseball/plugins/modernizr-2.5.3.min.js"></script>
 </head>
+
 <body>
-	<div id="canbaseball">
-		<header>
-			<h1>canbaseball</h1>
-		</header>
-		<section id="a"></section>
-		<section id="b"></section>
-		<section id="c"></section>
-	</div>
-	<script type='text/javascript' src='../steal/steal.js?canbaseball/canbaseball.js,development'></script>
+
+<!-- Top navigation bar -->
+<aside class="topNav">
+    <div class="fixed">
+        <div class="wrapper">
+            <div class="welcome">
+                <a href="#" title="">
+                    <img src="/donejs/canbaseball/resources/images/icons/topnav/userPic.png" alt="" />
+                </a>
+                <span>Hello, Mikey</span>
+            </div>
+            <div class="userNav">
+                <ul>
+                    <li><a href="#" title=""><img src="/donejs/canbaseball/resources/images/icons/topnav/profile.png" alt="" /><span>Profile</span></a></li>
+                    <li>
+                        <a href="#" title="">
+                            <img src="/donejs/canbaseball/resources/images/icons/topnav/messages.png" alt="" />
+                            <span>Notifications</span>
+                            <span class="numberTop">8</span>
+                        </a>
+                    </li>
+                    <li class="dd">
+                        <a title="">
+                            <img src="/donejs/canbaseball/resources/images/icons/topnav/tasks.png" alt="" />
+                            <span>Quick Tasks</span>
+                            
+                        </a>
+                        <ul class="menu_body">
+                            <li><a href="#" title="" class="sAdd">New Player</a></li>
+                            <li><a href="#" title="" class="sInbox">New Team</a></li>
+                            <li><a href="#" title="" class="sInbox">Fantasy Team</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" title=""><img src="/donejs/canbaseball/resources/images/icons/topnav/settings.png" alt="" /><span>Settings</span></a></li>
+                    <li><a href="#" title=""><img src="/donejs/canbaseball/resources/images/icons/topnav/question.png" alt="" /><span>Help</span></a></li>
+                    <li><a href="login.html" title=""><img src="/donejs/canbaseball/resources/images/icons/topnav/logout.png" alt="" /><span>Logout</span></a></li>
+                </ul>
+            </div>
+            <div class="fix"></div>
+        </div>
+    </div>
+</aside>
+
+<div class="wrapper">
+    <div class="logo"><a href="/" title=""><img src="/donejs/canbaseball/resources/images/logo.png" alt="" /></a></div>
+
+    <!-- Status Panel -->
+    <section class="topContent"></section>
+    <div class="fix"></div>
+</div>
+
+<div class="wrapper">
+    
+    <!-- Left navigation -->
+    <nav></nav>
+    <div class="search">
+        <form action="" class="sidebarSearch">
+            <input type="text" name="search" placeholder="Search..." id="ac" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+            <input type="submit" value="">
+        </form>        
+    </div>
+    
+    <!-- Content -->
+    <section class="content">
+        <header class="title"><h5>Dashboard</h5></header>
+
+        <div id="mainContent"></div>
+        
+    </section>
+    <div class="fix"></div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="wrapper">
+        <span>&copy; Copyright 2012. All rights reserved.</span>
+    </div>
+</footer>
+
+<script type='text/javascript' src='../steal/steal.js?canbaseball,development'></script>
+
 </body>
 </html>

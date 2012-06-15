@@ -1,0 +1,6 @@
+Home Run Leaders<br/><br/>
+<ul>
+    <% $.each(players, function(i, p) { %>
+        <li><%= p.player %> <%=p.attr('hr') %></li>
+    <% }) %>
+</ul>

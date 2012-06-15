@@ -1,0 +1,5 @@
+<ul>
+    <% $.each(standings.teams, function(i, team) { %>
+        <li><%=i+1%>. <%= team.name%> (<%=team.wins%>-<%=team.losses%>)</li>
+    <% }) %>
+</ul>
