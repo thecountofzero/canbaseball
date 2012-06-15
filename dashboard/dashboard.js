@@ -3,7 +3,6 @@ steal({src: 'canbaseball/fixtures/fixtures.js', ignore: true});
 steal('can/control', 'can/view/ejs', 'can/route', 'can/control/route').
 then('canbaseball/widgets/status_panel',
 	'canbaseball/widgets/navigation',
-	'canbaseball/widgets/scoreboard',
 	'canbaseball/widgets/standings',
 	'canbaseball/widgets/stats_leaders',
 	'canbaseball/ui/collapsible',
