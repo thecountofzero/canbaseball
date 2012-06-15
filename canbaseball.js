@@ -19,11 +19,11 @@ then('canbaseball/lib/utils',
             var app = data.app;
 
             if(this.currentApp !== app) {
-                this.mainContent.empty();
+                this.mainContent.empty().append('<div id="app"></div>');
 
                 if(app === 'dashboard') {
                     console.log('loading dashboard');
-                    new CanBaseball.Dashboard(this.mainContent);
+                    new CanBaseball.Dashboard(this.mainContent.find('#app'));
                 }
             }
 
