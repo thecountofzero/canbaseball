@@ -19,6 +19,10 @@ steal('can/control', 'can/view/ejs')
             }).then(function(frag) {
                 self.element.append(frag);
             });
+        },
+
+        destroy: function() {
+            console.log('standings destroy');
         }
     });
 });
