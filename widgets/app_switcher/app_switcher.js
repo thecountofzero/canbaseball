@@ -35,12 +35,12 @@ steal('can/control', 'can/view/ejs', 'can/route', 'can/control/route', function(
                 if(this.options.useAppSpace && this.currentAppName) {
                     // Move current app to app space before loading new app
                     appContainer.find('.app').appendTo(this.appSpace);
+                    existingApp = this.appSpace.find('.'+appName);
                 }
                 else {
                     appContainer.empty();
                 }
 
-                existingApp = this.appSpace.find('.'+appName);
                 if(this.options.useAppSpace && existingApp.length) {
                     
                     existingApp.appendTo(appContainer);
