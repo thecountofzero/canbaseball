@@ -16,7 +16,7 @@ then('canbaseball/widgets/status_panel',
 
 			this.element.append(can.view('//canbaseball/dashboard/dashboard.ejs', {}));
 
-			new CanBaseball.Standings('#standingsContent', {});
+			this.standingsControl = new CanBaseball.Standings('#standingsContent', {});
 			new CanBaseball.StatsLeaders('#statsContent', {});
 
 			new CanBaseball.UI.Collapsible('#standings', {});
@@ -29,7 +29,7 @@ then('canbaseball/widgets/status_panel',
 		},
 
 		destroy: function() {
-			console.log('dashboard destroy');
+			this.standingsControl.destroy();
 			can.Control.prototype.destroy.call(this);
 		}
 	});
