@@ -2,7 +2,7 @@ steal({src: 'canbaseball/fixtures/fixtures.js', ignore: true});
 
 steal('can/control', 'can/view/ejs', 'can/route', 'can/control/route').
 then('canbaseball/lib/canbaseball/utils',
-    'canbaseball/plugins/localization.js',
+    'canbaseball/tcoz/lib/localization',
     'canbaseball/lib/ajaxsettings.js',
     'canbaseball/widgets/status_panel',
     'canbaseball/widgets/navigation',
