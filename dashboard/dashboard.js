@@ -10,7 +10,6 @@ then('canbaseball/widgets/status_panel',
 	'canbaseball/plugins/jquery.ba-dotimeout.min.js', function($) {
 
 	can.Control("CanBaseball.Dashboard", {
-		listensTo: ['paused']
 	}, {
 		// Initialize the Dashboard
 		init : function() {
@@ -33,7 +32,7 @@ then('canbaseball/widgets/status_panel',
 		},
 
 		destroy: function() {
-			this.standingsControl.destroy();
+			//this.standingsControl.destroy();
 			can.Control.prototype.destroy.call(this);
 		}
 	});
