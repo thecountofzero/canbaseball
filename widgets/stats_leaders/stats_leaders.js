@@ -1,7 +1,7 @@
 steal({src: 'canbaseball/fixtures/fixtures.js', ignore: true});
 
 steal('can/control', 'can/view/ejs')
-.then('canbaseball/lib/utils',
+.then('canbaseball/lib/canbaseball/utils',
     'canbaseball/lib/ajaxsettings.js',
     'canbaseball/models/stats.js', function($) {
 
