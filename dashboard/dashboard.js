@@ -10,6 +10,8 @@ then('canbaseball/widgets/status_panel',
 	'canbaseball/plugins/jquery.ba-dotimeout.min.js', function($) {
 
 	can.Control("CanBaseball.Dashboard", {
+		listensTo: ['paused']
+	}, {
 		// Initialize the Dashboard
 		init : function() {
 			var self = this;
@@ -21,11 +23,13 @@ then('canbaseball/widgets/status_panel',
 
 			new CanBaseball.UI.Collapsible('#standings', {});
 			new CanBaseball.UI.Collapsible('#stats', {});
-			//new CanBaseball.UI.Collapsible('#playerNews', {});
 		},
 
 		"{can.route} appId": function(route, ev, newVal, oldVal) {
 			console.log('change: ' + newVal + ':' + oldVal);
+		},
+
+		" paused": function(el, ev) {
 		},
 
 		destroy: function() {
