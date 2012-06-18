@@ -5,24 +5,22 @@ then('canbaseball/lib/utils',
     'canbaseball/lib/ajaxsettings.js',
     'canbaseball/widgets/status_panel',
     'canbaseball/widgets/navigation',
-    'canbaseball/widgets/app_switcher',
+    'tcoz/app_switcher',
     'canbaseball/dashboard',
+    'canbaseball/widgets/standings',
     'canbaseball/resources/css', function($) {
 
-    can.route(':app');
-    can.route(':app/:appId');
-    can.route('', {app: 'dashboard'});
 
-    new CanBaseball.AppSwitcher($('#mainContent'), {
+    new TCOZ.AppSwitcher($('#mainContent'), {
         apps: {
-            'dashboard': CanBaseball.Dashboard
+            'dashboard': CanBaseball.Dashboard,
+            'standings': CanBaseball.Standings
         }
     });
 
     $(document).ready(function() {
         new CanBaseball.Navigation('nav', {});
         new CanBaseball.StatusPanel('.topContent', {});
-        //new CanBaseball.Dashboard('#mainContent');
     });
     
 });
