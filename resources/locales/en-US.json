@@ -1,0 +1,14 @@
+{
+    "cloudarray": {
+        "search": {
+            "placeholder": "Search..."
+        },
+        "footer": {
+            "copyright": "Copyright 2012. All rights reserved."
+        },
+        "ajax": {
+            "timeout": "The request has timed out",
+            "unexpected": "An unexpected error has occurred"
+        }
+    }
+}
