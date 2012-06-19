@@ -1,3 +1,9 @@
 [submodule "tcoz"]
 	path = tcoz
 	url = git://github.com/thecountofzero/tcoz.git
+[submodule "can"]
+	path = can
+	url = git://github.com/thecountofzero/canjs.git
+[submodule "steal"]
+	path = steal
+	url = git://github.com/thecountofzero/steal.git
