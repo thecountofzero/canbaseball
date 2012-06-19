@@ -1,0 +1,51 @@
+.animatedBar .ui-progressbar-value {
+    background-image: url('/donejs/canbaseball/resources/images/jqueryui/pbar_animated.gif');
+    background-size: 30px 30px;
+}
+.cacheActivity {
+    height: 230px;
+}
+.progressLabel {
+    text-align: center;
+    display: block;
+    font-family: 'Cuprum', sans-serif;
+    font-weight: 800;
+    font-size: 1.2em;
+}
+.replication { margin-top: 10px }
+
+section.hitRatio {
+    font-size: 20px;
+    height: 30px;
+    line-height: 31px;
+    padding: 20px 10px 10px 10px;
+    font-family: 'Cuprum', sans-serif;
+    text-align: center;
+}
+section.hitRatio ul li div {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+}
+section.hitRatio ul li div div {
+    display: inline-block;
+    border: 1px solid #292d2f;
+    color: #fafafa;
+    padding: 0 10px;
+    -moz-box-shadow: 0 1px 0 #474c4f;
+    -webkit-box-shadow: 0 1px 0 #474c4f;
+    box-shadow: 0 1px 0 #474c4f;
+    float: left;
+    width: 45px;
+}
+section.hitRatio ul li span {
+    float: right;
+    margin-left: 10px;
+}
+
+.moreCache { margin-top: 15px }
+.moreCache a {
+    text-decoration: underline;
+    font-family: 'Cuprum', sans-serif;
+}

@@ -1,0 +1,44 @@
+[
+    {
+        "id": "DASHBOARD",
+        "url": "#dashboard",
+        "css": "dash",
+        "label": "cloudarray.navigation.dashboard",
+        "subItems": []
+    },
+    {
+        "id": "TEAMS",
+        "url": "#teams",
+        "css": "volume",
+        "label": "cloudarray.navigation.teams",
+        "subItems": []
+    },
+    {
+        "id": "PLAYERS",
+        "url": "#players",
+        "css": "computer",
+        "label": "cloudarray.navigation.players",
+        "subItems": []
+    },
+    {
+        "id": "SCORES",
+        "url": "#scores",
+        "css": "cloud",
+        "label": "cloudarray.navigation.scores",
+        "subItems": []
+    },
+    {
+        "id": "STANDINGS",
+        "url": "#standings",
+        "css": "files",
+        "label": "cloudarray.navigation.standings",
+        "subItems": []
+    },
+    {
+        "id": "STATS",
+        "url": "#stats",
+        "css": "typo",
+        "label": "cloudarray.navigation.statistics",
+        "subItems": []
+    }
+]

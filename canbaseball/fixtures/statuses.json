@@ -1,0 +1,26 @@
+[
+	{
+		"componentId": "STATS",
+		"status": 1,
+		"description": "Mouseover text",
+		"label": "Stats"
+	},
+	{
+		"componentId": "PLAYER_RATER",
+		"status": 1,
+		"description": "Mouseover text",
+		"label": "Player Rater"
+	},
+	{
+		"componentId": "LIVE_SCORING",
+		"status": 1,
+		"description": "Mouseover text",
+		"label": "Live Scoring"
+	},
+	{
+		"componentId": "ANALYSIS",
+		"status": 2,
+		"description": "Mouseover text",
+		"label": "Analyzer"
+	}
+]

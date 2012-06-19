@@ -1,0 +1,15 @@
+<li class="<%= navItem.css %>">
+    <a href="<%= navItem.url %>">
+        <span><%= $.t(navItem.label, "") %></span>
+        <% if(navItem.subItems.length) { %>
+            <span class="numberLeft"><%= navItem.subItems.length %></span>
+        <% } %>
+    </a>
+    <% if(navItem.subItems.length) { %>
+        <ul class="sub">
+            <% for(var j = 0; j < navItem.subItems.length; j++) { %>
+                <li><a href="<%= navItem.subItems[j].url %>"><%= navItem.subItems[j].label %></a></li>
+            <% } %>
+        </ul>
+    <% } %>
+</li>

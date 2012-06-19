@@ -1,0 +1,46 @@
+{   
+    "id": "STANDINGS",
+    "league": "American League",
+    "teams": [
+        {
+            "name": "Yankees",
+            "wins": 30,
+            "losses": 10
+        },
+        {
+            "name": "Royals",
+            "wins": 20,
+            "losses": 20
+        },
+        {
+            "name": "Indians",
+            "wins": 18,
+            "losses": 16
+        },
+        {
+            "name": "Tigers",
+            "wins": 18,
+            "losses": 16
+        },
+        {
+            "name": "White Sox",
+            "wins": 15,
+            "losses": 25
+        },
+        {
+            "name": "Mariners",
+            "wins": 14,
+            "losses": 26
+        },
+        {
+            "name": "Bears",
+            "wins": 10,
+            "losses": 30
+        },
+        {
+            "name": "Red Sox",
+            "wins": 0,
+            "losses": 40
+        }
+    ]
+}

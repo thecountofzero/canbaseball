@@ -1,0 +1,33 @@
+{
+    "cloudarray": {
+        "navigation": {
+            "dashboard": "Dashboard",
+            "teams": "Teams",
+            "players": "Players",
+            "scores": "Scores",
+            "standings": "Standings",
+            "statistics": "Statistics"
+        },
+        "dashboard": {
+            "standings": {
+                "heading": "Standings"
+            },
+            "stats": {
+                "heading": "Statistics"
+            },
+            "playerNews": {
+                "heading": "Recent Player News"
+            }
+        },
+        "search": {
+            "placeholder": "Search..."
+        },
+        "footer": {
+            "copyright": "Copyright 2012. All rights reserved."
+        },
+        "ajax": {
+            "timeout": "The request has timed out",
+            "unexpected": "An unexpected error has occurred"
+        }
+    }
+}

@@ -1,0 +1,5 @@
+<ul class="menu">
+    <% for(var i = 0; i < navItems.length; i++) { %>
+        <%== can.view.render( '//canbaseball/widgets/navigation/nav_item.ejs', { navItem: navItems[i] } ) %>
+    <% } %>
+</ul>
