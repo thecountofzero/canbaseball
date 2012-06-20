@@ -1,13 +1,13 @@
 steal({src: 'canbaseball/fixtures/fixtures.js', ignore: true});
 
 steal('can/control', 'can/view/ejs', 'can/route', 'can/control/route').
-then('canbaseball/tcoz/lib/util',
-    //'canbaseball/tcoz/lib/localization',
+then('tcoz/lib/util',
+    'tcoz/lib/localization',
     'canbaseball/lib/ajaxsettings.js',
     'canbaseball/widgets/status_panel',
     'canbaseball/widgets/navigation',
-    'canbaseball/tcoz/app_switcher',
-    'canbaseball/tcoz/breadcrumb',
+    'tcoz/app_switcher',
+    'tcoz/breadcrumb',
     'canbaseball/dashboard',
     'canbaseball/widgets/standings',
     'canbaseball/resources/css', function($) {
@@ -16,12 +16,12 @@ then('canbaseball/tcoz/lib/util',
     can.route(':app/:appId');
     can.route('', {app: 'dashboard'});
 
-    console.dir(tcoz);
-
-    $tcoz.localization.init().loadDictionary('resources/locales', function() {
-
+    tcoz.localization.init().loadDictionary('resources/locales', function() {
+    //new tcoz.Localization().loadDictionary('resources/locales', function($t) {
+    //tcoz.localization.init().loadDictionary('resources/locales', function() {
         $(document).ready(function() {
 
+            console.dir(tcoz.localization);
             new TCOZ.AppSwitcher($('#mainContent'), {
                 apps: {
                     'dashboard': CanBaseball.Dashboard,
