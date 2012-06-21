@@ -6,13 +6,10 @@ steal('can/control',
 	'canbaseball/ui/collapsible_menu',
 	'canbaseball/resources/css', function($) {
 
-	can.Control("CanBaseball.Navigation", {
+	window.CanBaseball = window.CanBaseball || {};
 
-		defaults: {
-		}
-	}, {
+	window.CanBaseball.Navigation = can.Control({
 
-		// Initialize the Status Panel
 		init : function() {
 			var self = this;
 

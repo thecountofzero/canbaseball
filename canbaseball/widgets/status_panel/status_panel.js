@@ -7,14 +7,14 @@ steal('can/control',
 then('canbaseball/plugins/jquery.ba-dotimeout.min.js',
     'canbaseball/plugins/qtip2', function($) {
 
-	can.Control("CanBaseball.StatusPanel", {
+    window.CanBaseball = window.CanBaseball || {};
+
+	window.CanBaseball.StatusPanel = can.Control({
 
 		defaults: {
 			pollerName: 'statusPoller',
 			pollingInterval: 4000
-		},
-
-		listensTo: ['statusChange']
+		}
 	}, {
 
 		// Initialize the Status Panel
@@ -40,7 +40,6 @@ then('canbaseball/plugins/jquery.ba-dotimeout.min.js',
 			var changingStatus = Math.floor(Math.random() * 10) % this.numStatuses,
 				newValue = Math.floor(Math.random() * 3);
 			this.statuses[changingStatus].attr("status", newValue);
-			//console.log("Update (" + changingStatus + ") to: " + newValue);
 		},
 
         _initPolling: function() {
@@ -67,7 +66,7 @@ then('canbaseball/plugins/jquery.ba-dotimeout.min.js',
 			});
         },
 
-        'statusChange': function(el, ev, status) {
+        ' statusChange': function(el, ev, status) {
 			this.updateStatus(status);
         },
 

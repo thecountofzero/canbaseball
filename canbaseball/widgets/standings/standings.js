@@ -1,15 +1,14 @@
 steal({src: 'canbaseball/fixtures/fixtures.js', ignore: true});
 
 steal('can/control', 'can/view/ejs')
-.then('canbaseball/lib/canbaseball/utils',
-    'tcoz/lib/localization/localization-alt.js',
+.then('tcoz/lib/localization',
     'canbaseball/lib/ajaxsettings.js',
     'canbaseball/models/standings.js', function($) {
 
-    can.Control("CanBaseball.Standings", {
+    window.CanBaseball = window.CanBaseball || {};
 
-        defaults: {}
-    }, {
+    window.CanBaseball.Standings = can.Control({
+        
         init : function() {
             var self = this;
             tcoz.localization.init().loadDictionary('/canbaseball/canbaseball/widgets/standings/locales', function() {

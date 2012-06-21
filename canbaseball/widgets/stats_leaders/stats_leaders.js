@@ -1,14 +1,13 @@
 steal({src: 'canbaseball/fixtures/fixtures.js', ignore: true});
 
 steal('can/control', 'can/view/ejs')
-.then('canbaseball/lib/canbaseball/utils',
-    'canbaseball/lib/ajaxsettings.js',
+.then('canbaseball/lib/ajaxsettings.js',
     'canbaseball/models/stats.js', function($) {
 
-    can.Control("CanBaseball.StatsLeaders", {
+    window.CanBaseball = window.CanBaseball || {};
 
-        defaults: {}
-    }, {
+    window.CanBaseball.StatsLeaders = can.Control({
+        
         init : function() {
             var self = this;
 
