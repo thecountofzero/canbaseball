@@ -21,10 +21,6 @@ steal('can/control', 'can/view/ejs')
                     self.element.append(frag);
                 });
             });
-        },
-
-        destroy: function() {
-            console.log('standings destroy');
         }
     });
 });
