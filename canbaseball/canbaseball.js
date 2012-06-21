@@ -1,8 +1,9 @@
 steal({src: 'canbaseball/fixtures/fixtures.js', ignore: true});
 
 steal('can/control', 'can/view/ejs', 'can/route', 'can/control/route').
-then('tcoz/lib/util',
-    'tcoz/lib/localization/localization-alt.js',
+then('canbaseball/lib/canbaseball',
+    'tcoz/lib/util',
+    'tcoz/lib/localization',
     'canbaseball/lib/ajaxsettings.js',
     'canbaseball/widgets/status_panel',
     'canbaseball/widgets/navigation',
@@ -16,17 +17,19 @@ then('tcoz/lib/util',
     can.route(':app/:appId');
     can.route('', {app: 'dashboard'});
 
-    //tcoz.localization.init().loadDictionary('resources/locales', function() {
-    //new tcoz.Localization().loadDictionary('resources/locales', function($t) {
     tcoz.localization.init().loadDictionary('resources/locales', function() {
         $(document).ready(function() {
 
             new TCOZ.AppSwitcher($('#mainContent'), {
                 apps: {
-                    'dashboard': CanBaseball.Dashboard,
+                    'dashboard': {
+                        app: CanBaseball.Dashboard,
+                        opts: {name: 'Ryan Braun'}
+                    },
                     'standings': CanBaseball.Standings
                 },
-                useAppSpace: false
+                useAppSpace: false,
+                appOpts: {name: 'mikey'}
             });
 
             $('.topNav').append(can.view('views/topnav.ejs'));
