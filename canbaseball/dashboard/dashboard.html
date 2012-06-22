@@ -10,13 +10,15 @@
 </head>
 <body>
     <div id="dashboard"></div>
-    <script type='text/javascript' src='../../steal/steal.js?cloudarray/dashboard,development'></script>
+    <script type='text/javascript' src='../../steal/steal.js'></script>
 
     <script type='text/javascript'>
         
-        steal('jquery').then(function($) {
-            $(document).ready(function() {
-                new CloudArray.Dashboard('#dashboard', {});
+        steal('tcoz/lib/localization').then('canbaseball/dashboard').then(function($) {
+            tcoz.localization.init().loadDictionary('/canbaseball/canbaseball/resources/locales', function() {
+                $(document).ready(function() {
+                    new CanBaseball.Apps.Dashboard('#dashboard');
+                });
             });
         });
     </script>

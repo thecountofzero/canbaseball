@@ -1,31 +1,30 @@
 steal({src: 'canbaseball/fixtures/fixtures.js', ignore: true});
 
 steal('can/control', 'can/view/ejs', 'can/route', 'can/control/route').
-then('canbaseball/widgets/status_panel',
+then('canbaseball/standings',
+	'canbaseball/widgets/status_panel',
 	'canbaseball/widgets/navigation',
-	'canbaseball/widgets/standings',
 	'canbaseball/widgets/stats_leaders',
-	'canbaseball/ui/collapsible',
+	'tcoz/ui/collapsible',
 	'canbaseball/resources/css',
 	'canbaseball/plugins/jquery.ba-dotimeout.min.js', function($) {
 
 	window.CanBaseball = window.CanBaseball || {};
+	window.CanBaseball.Apps = window.CanBaseball.Apps || {};
 
-	window.CanBaseball.Dashboard = can.Control({
+	window.CanBaseball.Apps.Dashboard = can.Control({
 
 		// Initialize the Dashboard
 		init : function() {
 			var self = this;
 
-			console.dir(this.options);
+			this.element.append(can.view('//canbaseball/dashboard/views/dashboard.ejs', {}));
 
-			this.element.append(can.view('//canbaseball/dashboard/dashboard.ejs', {}));
+			this.standingsControl = new CanBaseball.Apps.Standings('#standingsContent', {});
+			new CanBaseball.Widgets.StatsLeaders('#statsContent', {});
 
-			this.standingsControl = new CanBaseball.Standings('#standingsContent', {});
-			new CanBaseball.StatsLeaders('#statsContent', {});
-
-			new CanBaseball.UI.Collapsible('#standings', {});
-			new CanBaseball.UI.Collapsible('#stats', {});
+			new TCOZ.UI.Collapsible('#standings', {});
+			new TCOZ.UI.Collapsible('#stats', {});
 		},
 
 		" paused": function(el, ev) {
