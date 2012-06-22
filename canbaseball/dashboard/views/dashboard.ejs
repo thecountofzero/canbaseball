@@ -1,0 +1,43 @@
+<!-- Dashboard -->
+<article class="scoreboard">
+    <ul>
+        <li><a href="#scores/123" title="">Yankees 6, Red Sox 2</a></li>
+        <li><a href="#scores/124" title="">Royals 6, Tigers 2</a></li>
+        <li><a href="#scores/125" title="">Mariners 6, Bears 2</a></li>
+        <li><a href="#scores/126" title="">White Sox 6, Indians 2</a></li>
+    </ul>
+    <div class="clear"></div>
+</article>
+
+<div class="widgets">
+    <div class="left">
+        <section class="widget">
+            <header class="head" id="standings">
+                <h5 class="iGraph"><%= $.t("cloudarray.dashboard.standings.heading", "Standings") %></h5>
+                <span class="help"><img src="resources/images/icons/help_circle.png" alt="" /></span>
+            </header>
+            <div id="standingsContent" class="body"></div>
+        </section>
+    </div>
+    
+    <div class="right">
+        <section class="widget">
+            <header class="head" id="stats">
+                <h5 class="iGraph"><%= $.t("cloudarray.dashboard.stats.heading", "Stats Leaders") %></h5>
+                <span class="help"><img src="resources/images/icons/help_circle.png" alt="" /></span>
+            </header>
+            <div id="statsContent" class="body"></div>
+        </section>
+    </div>
+    <div class="fix"></div>
+</div>
+
+<div class="widget">
+    <div class="head" id="playerNews">
+        <h5 class="iGraph"><%= $.t("cloudarray.dashboard.playerNews.heading", "Recent Player News") %></h5>
+        <span class="help"><img src="resources/images/icons/help_circle.png" alt="" /></span>
+    </div>
+    <div class="body">
+        <div class=""></div>
+    </div>
+</div>

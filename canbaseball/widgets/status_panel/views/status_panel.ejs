@@ -1,0 +1,12 @@
+<article class="statusPanel">
+	<ul>
+		<% list(statuses, function( status ) { %>
+			<li <%= (el)-> el.data('status', status) %>>
+				<a href="#" data-tooltip="<%= status.attr('description') %>" class="<%= status.attr('statusClass') %>">
+					<span></span>
+				</a>
+				<h5><%= status.attr("label") %></h5></li>
+		<% }) %>
+    </ul>
+    <div class="clear"></div>
+</article>
