@@ -8,8 +8,9 @@ then('canbaseball/plugins/jquery.ba-dotimeout.min.js',
     'canbaseball/plugins/qtip2', function($) {
 
     window.CanBaseball = window.CanBaseball || {};
+    window.CanBaseball.Widgets = window.CanBaseball.Widgets || {};
 
-	window.CanBaseball.StatusPanel = can.Control({
+	window.CanBaseball.Widgets.StatusPanel = can.Control({
 
 		defaults: {
 			pollerName: 'statusPoller',
@@ -24,7 +25,7 @@ then('canbaseball/plugins/jquery.ba-dotimeout.min.js',
 			this.numStatuses = 0;
 
 			// Render Status Panel
-			can.view('//canbaseball/widgets/status_panel/status_panel.ejs', {
+			can.view('//canbaseball/widgets/status_panel/views/status_panel.ejs', {
 				statuses: CanBaseball.Models.Status.findAll({}, function(statuses) {
 					self.statuses = statuses;
 					self.numStatuses = statuses.length;
@@ -76,10 +77,6 @@ then('canbaseball/plugins/jquery.ba-dotimeout.min.js',
 
         updateStatus: function(status) {
 			this._getStatus(status.statusId).attr('status', status.status);
-        },
-
-		'{window} click': function(el, ev) {
-			this.updateStatus({statusId: 'VOLUME_STATUS', status: 0});
-		}
+        }
 	});
 });

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -9,14 +9,16 @@
 </head>
 <body>
 	<div id="status_panel"></div>
-	<script type='text/javascript' src='../../../steal/steal.js?canbaseball/widgets/status_panel,development'></script>
+	<script type='text/javascript' src='../../../steal/steal.js'></script>
 
 	<script type='text/javascript'>
 		
-		steal('jquery').then(function($) {
-			$(document).ready(function() {
-				new CanBaseball.StatusPanel('#status_panel', {});
-			});
+		steal('tcoz/lib/localization').then('canbaseball/widgets/status_panel').then(function($) {
+			tcoz.localization.init().loadDictionary('/canbaseball/canbaseball/resources/locales', function() {
+				$(document).ready(function() {
+					new CanBaseball.Widgets.StatusPanel('#status_panel');
+				});
+            });
 		});
 	</script>
 </body>

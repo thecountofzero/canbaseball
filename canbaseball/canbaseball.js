@@ -10,7 +10,7 @@ then('canbaseball/lib/canbaseball',
     'tcoz/app_switcher',
     'tcoz/breadcrumb',
     'canbaseball/dashboard',
-    'canbaseball/widgets/standings',
+    'canbaseball/standings',
     'canbaseball/resources/css', function($) {
 
     can.route(':app');
@@ -23,10 +23,10 @@ then('canbaseball/lib/canbaseball',
             new TCOZ.AppSwitcher($('#mainContent'), {
                 apps: {
                     'dashboard': {
-                        app: CanBaseball.Dashboard,
+                        app: CanBaseball.Apps.Dashboard,
                         opts: {name: 'Ryan Braun'}
                     },
-                    'standings': CanBaseball.Standings
+                    'standings': CanBaseball.Apps.Standings
                 },
                 useAppSpace: false,
                 appOpts: {name: 'mikey'}
@@ -36,8 +36,8 @@ then('canbaseball/lib/canbaseball',
             $('.search').append(can.view('views/search.ejs'));
             $('footer').append(can.view('views/footer.ejs'));
 
-            new CanBaseball.Navigation('nav', {});
-            new CanBaseball.StatusPanel('.topContent', {});
+            new CanBaseball.Widgets.Navigation('nav', {});
+            new CanBaseball.Widgets.StatusPanel('.topContent', {});
             new TCOZ.Breadcrumb('.breadcrumb h5');
         });
     });

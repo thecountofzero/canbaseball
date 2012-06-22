@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -10,14 +10,16 @@
 </head>
 <body>
 	<nav></nav>
-	<script type='text/javascript' src='../../../steal/steal.js?canbaseball/widgets/navigation,development'></script>
+	<script type='text/javascript' src='../../../steal/steal.js'></script>
 
 	<script type='text/javascript'>
 		
-		steal('jquery').then(function($) {
-			$(document).ready(function() {
-				new CanBaseball.Navigation('nav', {});
-			});
+		steal('tcoz/lib/localization').then('canbaseball/widgets/navigation').then(function($) {
+			tcoz.localization.init().loadDictionary('/canbaseball/canbaseball/resources/locales', function() {
+				$(document).ready(function() {
+					new CanBaseball.Widgets.Navigation('nav');
+				});
+            });
 		});
 	</script>
 </body>

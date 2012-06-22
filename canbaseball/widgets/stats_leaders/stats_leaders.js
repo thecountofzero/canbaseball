@@ -5,13 +5,14 @@ steal('can/control', 'can/view/ejs')
     'canbaseball/models/stats.js', function($) {
 
     window.CanBaseball = window.CanBaseball || {};
+    window.CanBaseball.Widgets = window.CanBaseball.Widgets || {};
 
-    window.CanBaseball.StatsLeaders = can.Control({
+    window.CanBaseball.Widgets.StatsLeaders = can.Control({
         
         init : function() {
             var self = this;
 
-            can.view('//canbaseball/widgets/stats_leaders/stats_leaders.ejs', {
+            can.view('//canbaseball/widgets/stats_leaders/views/stats_leaders.ejs', {
                 players: CanBaseball.Models.Stats.findAll({}, function(s) {
                     self.stats = s;
                 })
