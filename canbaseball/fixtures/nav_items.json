@@ -33,12 +33,5 @@
         "css": "files",
         "label": "cloudarray.navigation.standings",
         "subItems": []
-    },
-    {
-        "id": "STATS",
-        "url": "#stats",
-        "css": "typo",
-        "label": "cloudarray.navigation.statistics",
-        "subItems": []
     }
 ]
