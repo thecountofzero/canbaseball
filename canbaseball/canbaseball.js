@@ -11,6 +11,9 @@ then('canbaseball/lib/canbaseball',
     'tcoz/breadcrumb',
     'canbaseball/dashboard',
     'canbaseball/standings',
+    'canbaseball/players',
+    'canbaseball/scores',
+    'canbaseball/teams',
     'canbaseball/resources/css', function($) {
 
     can.route(':app');
@@ -26,6 +29,9 @@ then('canbaseball/lib/canbaseball',
                         app: CanBaseball.Apps.Dashboard,
                         opts: {name: 'Ryan Braun'}
                     },
+                    'players': CanBaseball.Apps.Players,
+                    'scores': CanBaseball.Apps.Scores,
+                    'teams': CanBaseball.Apps.Teams,
                     'standings': CanBaseball.Apps.Standings
                 },
                 appOpts: {username: 'thecountofzero'}
