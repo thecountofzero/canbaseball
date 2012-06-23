@@ -28,8 +28,7 @@ then('canbaseball/lib/canbaseball',
                     },
                     'standings': CanBaseball.Apps.Standings
                 },
-                useAppSpace: false,
-                appOpts: {name: 'mikey'}
+                appOpts: {username: 'thecountofzero'}
             });
 
             $('.topNav').append(can.view('views/topnav.ejs'));
