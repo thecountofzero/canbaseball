@@ -18,16 +18,21 @@ then('canbaseball/standings',
 		init : function() {
 			var self = this;
 
-			this.element.append(can.view('//canbaseball/dashboard/views/dashboard.ejs', {}));
+			this.element.append(can.view('//canbaseball/dashboard/views/dashboard.ejs'));
 
-			this.standingsControl = new CanBaseball.Apps.Standings('#standingsContent', {});
-			new CanBaseball.Widgets.StatsLeaders('#statsContent', {});
+			this.standingsControl = new CanBaseball.Apps.Standings('#standingsContent');
+			new CanBaseball.Widgets.StatsLeaders('#statsContent');
 
-			new TCOZ.UI.Collapsible('#standings', {});
-			new TCOZ.UI.Collapsible('#stats', {});
+			new TCOZ.UI.Collapsible('#standings');
+			new TCOZ.UI.Collapsible('#stats');
 		},
 
 		" paused": function(el, ev) {
+			console.log('The Dashboard has been paused...');
+		},
+
+		" resumed": function(el, ev) {
+			console.log('The Dashboard has been RESUMED');
 		},
 
 		destroy: function() {
